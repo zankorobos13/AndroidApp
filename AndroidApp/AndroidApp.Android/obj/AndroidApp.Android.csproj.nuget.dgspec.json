@@ -1,0 +1,147 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp.Android\\AndroidApp.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp.Android\\AndroidApp.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp.Android\\AndroidApp.Android.csproj",
+        "projectName": "AndroidApp.Android",
+        "projectPath": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp.Android\\AndroidApp.Android.csproj",
+        "packagesPath": "C:\\Users\\aruse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aruse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid11.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid11.0": {
+            "projectReferences": {
+              "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {
+                "projectPath": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid11.0": {
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            },
+            "Xamarin.Forms-IconTabbedPage": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
+            "Xamarin.MySql.Data": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
+        "projectName": "AndroidApp",
+        "projectPath": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\AndroidApp.csproj",
+        "packagesPath": "C:\\Users\\aruse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aruse\\source\\repos\\AndroidApp\\AndroidApp\\AndroidApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\aruse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.5, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.7.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[5.0.0.2012, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

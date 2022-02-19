@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidApp.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Padding="5, 5, 5, 5">
+            <Label x:Name="label" Text="Войти в учетную запись" TextColor="#000000" FontSize="25" Padding="50, 50, 10, 10"/>
+            <Entry x:Name="login_entry" Placeholder="Логин" Margin="0, 30, 0, 0"/>
+            <Entry x:Name="password_entry" Placeholder="Пароль" IsPassword="True" Margin="0, 30, 0, 0"/>
+            <Button Text="Войти" FontSize="25" Margin="20, 75, 10, 10" Clicked="Login"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
