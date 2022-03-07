@@ -1,9 +1,6 @@
 ﻿using MySqlConnector;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -116,6 +113,7 @@ namespace AndroidApp
                 layout.Children.Add(category_picker);
                 layout.Children.Add(submit_button);
 
+                // Добавление транзакции
 
                 async void Submit(object sender, EventArgs e)
                 {
@@ -127,6 +125,20 @@ namespace AndroidApp
                         decimal sum;
                         if (sum_entry.Text != "")
                         {
+                            string str = sum_entry.Text;
+
+                            try
+                            {
+                                str.Replace(",", CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);
+                            }
+                            catch (Exception) { }
+
+                            try
+                            {
+                                str.Replace(".", CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator);
+                            }
+                            catch (Exception) { }
+
                             sum = decimal.Parse(sum_entry.Text);
                             if (sum >= 0)
                             {

@@ -9,10 +9,10 @@ namespace AndroidApp
     
     public class Transaction
     {
-        public static Transaction[] transactions = new Transaction[0];
-        public static Transaction current_transaction = null;
-        private static Transaction[] transactions_memory = new Transaction[0];
-        public static string[] used_categories = new string[0];
+        public static Transaction[] transactions = new Transaction[0];          // Массив транзакций
+        public static Transaction current_transaction = null;                   // Поле служит для запоминания транзацкии, которую выбрал пользователь при нажатии на нее в списке
+        private static Transaction[] transactions_memory = new Transaction[0];  // Память, для запоминания транзакций, когда основной массив редактируется
+        public static string[] used_categories = new string[0];                 // Массив всех используемых категорий
 
         public static readonly string default_categories = "Транспорт;Аптеки;Дом;Одежда;Бизнес;Зарплата;Супермаркеты;Такси;Прочее";
         public static string sort_method = "dateTime_newest";
@@ -22,12 +22,7 @@ namespace AndroidApp
         public string comment;
         public readonly DateTime dateTime;
 
-        /*public decimal sum { get; set; }
-        public string category { get; set; }
-        public string comment { get; set; }
-        public DateTime dateTime { get; set; }*/
-
-
+        
         public Transaction(decimal sum, string category, string comment, DateTime dateTime)
         {
             this.sum = sum;
@@ -35,17 +30,20 @@ namespace AndroidApp
             this.comment = comment;
             this.dateTime = dateTime;
         }
-
+        
+        // Запоминание тразакций
         public static void RememberTransactions()
         {
             transactions_memory = transactions;
         }
 
+        // Получение транзакций из памяти
         public static void UploadTransactionsFromMemory()
         {
             transactions = transactions_memory;
         }
-
+        
+       // Сортировка по принципу Доход / Расход
        public static void SortByIncomeExpense(bool isIncome = true)
         {
             UploadTransactionsFromMemory();
@@ -62,7 +60,7 @@ namespace AndroidApp
             transactions = sorted_transactions;
         } 
 
-
+        // Сортировка по категории
         public static void SortByCategory(string category)
         {
             UploadTransactionsFromMemory();
@@ -77,6 +75,7 @@ namespace AndroidApp
             transactions = sorted_transactions;
         }
 
+        // Сортировка по дате и времени (от новых к старым и наоборот)
         public static void SortByDateTime(bool increasing = true)
         {
             UploadTransactionsFromMemory();
@@ -99,6 +98,7 @@ namespace AndroidApp
                 Array.Reverse(transactions);
         }
 
+        // Вспомогательный метод обзрезки массива
         private static void CutArr(ref Transaction[] arr, int x)
         {
             Transaction[] new_arr = new Transaction[x];
@@ -109,6 +109,7 @@ namespace AndroidApp
             arr = new_arr;
         }
 
+        // Сортировка по временному интервалу
         public static void SortByTimeInterval(TimeInterval interval)
         {
             UploadTransactionsFromMemory();
@@ -158,7 +159,7 @@ namespace AndroidApp
             transactions = sorted_transactions;
         }
 
-
+        // Добавление транзакции в массив
         public static void AddTransaction(Transaction transaction)
         {
             Append(ref transactions, transaction);
@@ -177,6 +178,7 @@ namespace AndroidApp
                 Append(ref used_categories, transaction.category);
         }
 
+        // Очистить массив транзакций и превести поля класса в значения по умолчанию
         public static void ClearTransaction()
         {
             transactions = new Transaction[0];
@@ -185,6 +187,7 @@ namespace AndroidApp
             sort_method = "dateTime_newest";
         }
 
+        // Добавлени элеметна в начало массива
         private static void Append(ref Transaction[] arr, Transaction transaction)
         {
             Transaction[] new_arr = new Transaction[arr.Length + 1];
@@ -222,23 +225,24 @@ namespace AndroidApp
     }
 
 
-
+    // Класс для работы с базой данных 
     public class DB
     {
         readonly MySqlConnection connection = new MySqlConnection("server=remotemysql.com;port=3306;username=NqaN7lnsn5;password=WGxtoGYopq;database=NqaN7lnsn5");
 
+        // Открыть соединение
         public void OpenConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
                 connection.Open();
         }
-
+        // Закрыть соединение
         public void CloseConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
                 connection.Close();
         }
-
+        // Вернуть соединение
         public MySqlConnection GetConnection()
         {
             return connection;
@@ -247,6 +251,7 @@ namespace AndroidApp
 
     public static class Encrypt
     {
+        // Функция хэширования
         public static string Sha256(string str)
         {
             SHA256 sha256 = SHA256.Create();

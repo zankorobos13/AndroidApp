@@ -2,6 +2,7 @@ C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Release\netstan
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Release\netstandard2.0\AndroidApp.dll
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Release\netstandard2.0\ref\AndroidApp.dll
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\bin\Release\netstandard2.0\AndroidApp.pdb
+C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Release\netstandard2.0\AndroidApp.csproj.AssemblyReference.cache
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Release\netstandard2.0\AccountPage.xaml.g.cs
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Release\netstandard2.0\AddPage.xaml.g.cs
 C:\Users\aruse\source\repos\AndroidApp\AndroidApp\AndroidApp\obj\Release\netstandard2.0\App.xaml.g.cs

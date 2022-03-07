@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using MySqlConnector;
@@ -22,8 +18,8 @@ namespace AndroidApp
 
         }
 
-        
 
+        // Функция регистрации аккаунта
         private async void Register(object sender, EventArgs e)
         {
             string login = login_entry.Text;

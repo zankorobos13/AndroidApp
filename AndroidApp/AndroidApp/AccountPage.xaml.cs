@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
@@ -53,6 +49,7 @@ namespace AndroidApp
             Content = layout;
         }
 
+        // Выход тз аккаунта
         private void Exit(object sender, EventArgs e)
         {
             Preferences.Set("login", null);
@@ -60,11 +57,13 @@ namespace AndroidApp
             OnAppearing();
         }
 
+        // Переход на страницу логина
         private async void Login(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginPage());
         }
 
+        // Переход на страницу регистрации
         private async void Register(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());

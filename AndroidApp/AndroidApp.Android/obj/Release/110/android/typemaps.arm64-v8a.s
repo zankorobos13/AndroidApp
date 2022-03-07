@@ -610,17 +610,17 @@ map_modules:
 	.zero	4
 	.xword	0
 
-	/* module_uuid: 4ac88495-3d91-4c0a-ad32-c453cd44375d */
-	.byte	0x95, 0x84, 0xc8, 0x4a, 0x91, 0x3d, 0x0a, 0x4c, 0xad, 0x32, 0xc4, 0x53, 0xcd, 0x44, 0x37, 0x5d
+	/* module_uuid: 849dd68e-7215-4e76-8f89-194180fa05d3 */
+	.byte	0x8e, 0xd6, 0x9d, 0x84, 0x15, 0x72, 0x76, 0x4e, 0x8f, 0x89, 0x19, 0x41, 0x80, 0xfa, 0x05, 0xd3
 	/* entry_count */
-	.word	2
+	.word	1
 	/* duplicate_count */
 	.word	0
 	/* map */
 	.xword	module29_managed_to_java
 	/* duplicate_map */
 	.xword	0
-	/* assembly_name: Xamarin.AndroidX.CardView */
+	/* assembly_name: AndroidApp.Android */
 	.xword	.L.map_aname.29
 	/* image */
 	.xword	0
@@ -630,17 +630,17 @@ map_modules:
 	.zero	4
 	.xword	0
 
-	/* module_uuid: 838e209a-db4b-4f6a-a116-551d582cb858 */
-	.byte	0x9a, 0x20, 0x8e, 0x83, 0x4b, 0xdb, 0x6a, 0x4f, 0xa1, 0x16, 0x55, 0x1d, 0x58, 0x2c, 0xb8, 0x58
+	/* module_uuid: 4ac88495-3d91-4c0a-ad32-c453cd44375d */
+	.byte	0x95, 0x84, 0xc8, 0x4a, 0x91, 0x3d, 0x0a, 0x4c, 0xad, 0x32, 0xc4, 0x53, 0xcd, 0x44, 0x37, 0x5d
 	/* entry_count */
-	.word	1
+	.word	2
 	/* duplicate_count */
 	.word	0
 	/* map */
 	.xword	module30_managed_to_java
 	/* duplicate_map */
 	.xword	0
-	/* assembly_name: AndroidApp.Android */
+	/* assembly_name: Xamarin.AndroidX.CardView */
 	.xword	.L.map_aname.30
 	/* image */
 	.xword	0
@@ -38411,7 +38411,7 @@ map_java:
 
 	/* #3737 */
 	/* module_index */
-	.word	29
+	.word	30
 	/* type_token_id */
 	.word	33554444
 	/* java_name */
@@ -38421,7 +38421,7 @@ map_java:
 
 	/* #3738 */
 	/* module_index */
-	.word	29
+	.word	30
 	/* type_token_id */
 	.word	33554445
 	/* java_name */
@@ -49561,7 +49561,7 @@ map_java:
 
 	/* #4852 */
 	/* module_index */
-	.word	30
+	.word	29
 	/* type_token_id */
 	.word	33554434
 	/* java_name */

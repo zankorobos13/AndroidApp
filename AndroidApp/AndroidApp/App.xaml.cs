@@ -16,6 +16,7 @@ namespace AndroidApp
             MainPage = new NavigationPage(new MainPage());
         }
 
+        // Получение транзакций из базы данных
         protected override void OnStart()
         {
             if (Preferences.Get("login", null) != null)

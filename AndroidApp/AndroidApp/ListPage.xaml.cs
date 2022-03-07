@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,16 +15,18 @@ namespace AndroidApp
             InitializeComponent();
         }
 
+        // Переход на страницу сортировки
         private async void SortBy(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SortPage());
         }
 
+        // Переход на страницу информации
         private async void ShowInfo(object sender, EventArgs e)
         {
             for (int i = 0; i < lay_arr.Length; i++)
             {
-                if (lay_arr[i] == ( sender as StackLayout) )
+                if (lay_arr[i] == (sender as StackLayout))
                 {
                     Transaction.current_transaction = Transaction.transactions[i];
                     await Navigation.PushAsync(new TransactionInfoPage());
@@ -43,7 +41,7 @@ namespace AndroidApp
 
             Transaction.UploadTransactionsFromMemory();
 
-            if (Preferences.Get("login", null) == null)
+            if (Preferences.Get("login", null) == null)                             // Если пользователь не залогинился
             {
                 Label warning_label = new Label()
                 {
@@ -57,7 +55,7 @@ namespace AndroidApp
                 layout.Children.Add(warning_label);
                 Content = layout;
             }
-            else if (Transaction.transactions.Length > 0)
+            else if (Transaction.transactions.Length > 0)                           // Если у пользователя есть транзакции
             {
                 Button sort_button = new Button()
                 {
@@ -70,6 +68,7 @@ namespace AndroidApp
 
                 layout.Children.Add(sort_button);
 
+                // Сортировка по выбранному методу
                 if (Transaction.sort_method == "dateTime_newest")
                     Transaction.SortByDateTime();
                 else if (Transaction.sort_method == "dateTime_oldest")
@@ -83,7 +82,7 @@ namespace AndroidApp
                 else if (Transaction.sort_method == "expense")
                     Transaction.SortByIncomeExpense(false);
 
-                if (Transaction.transactions.Length > 0)
+                if (Transaction.transactions.Length > 0)                             // Если у пользователя ессть транзакции в данной сортировке 
                 {
 
                     StackLayout[] new_lay_arr = new StackLayout[Transaction.transactions.Length];
@@ -135,7 +134,7 @@ namespace AndroidApp
                         lay_arr[i] = horizontalLayout;
                     }
                 }
-                else
+                else                                                            // Если у пользователя нет транзакций в данной сортировке
                 {
                     Label info_label = new Label()
                     {
@@ -153,7 +152,7 @@ namespace AndroidApp
                     Content = layout;
                 }
             }
-            else
+            else                                                                // Если у пользователя нет транзакций
             {
                 Label info_label = new Label()
                 {

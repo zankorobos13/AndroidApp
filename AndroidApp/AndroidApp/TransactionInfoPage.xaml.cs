@@ -17,6 +17,7 @@ namespace AndroidApp
             InitializeComponent();
         }
 
+        // Информация о current_transaction
         protected override void OnAppearing()
         {
             StackLayout layout = new StackLayout();

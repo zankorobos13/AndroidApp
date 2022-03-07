@@ -15486,19 +15486,19 @@ module28_managed_to_java_duplicates:
 	.type	module29_managed_to_java, %object
 	.p2align	2
 module29_managed_to_java:
-	.long	33554444
-	.long	3737
-	.long	33554445
-	.long	3738
-	.size	module29_managed_to_java, 16
+	.long	33554434
+	.long	4852
+	.size	module29_managed_to_java, 8
 
 	.section	.rodata.module30_managed_to_java,"a",%progbits
 	.type	module30_managed_to_java, %object
 	.p2align	2
 module30_managed_to_java:
-	.long	33554434
-	.long	4852
-	.size	module30_managed_to_java, 8
+	.long	33554444
+	.long	3737
+	.long	33554445
+	.long	3738
+	.size	module30_managed_to_java, 16
 
 	.section	.rodata.module31_managed_to_java,"a",%progbits
 	.type	module31_managed_to_java, %object

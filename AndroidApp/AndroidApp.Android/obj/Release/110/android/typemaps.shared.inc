@@ -175,14 +175,14 @@
 	.section	.rodata.map_aname.29,"aMS",@progbits,1
 	.type	.L.map_aname.29, @object
 .L.map_aname.29:
-	.asciz	"Xamarin.AndroidX.CardView"
-	.size	.L.map_aname.29, 26
+	.asciz	"AndroidApp.Android"
+	.size	.L.map_aname.29, 19
 
 	.section	.rodata.map_aname.30,"aMS",@progbits,1
 	.type	.L.map_aname.30, @object
 .L.map_aname.30:
-	.asciz	"AndroidApp.Android"
-	.size	.L.map_aname.30, 19
+	.asciz	"Xamarin.AndroidX.CardView"
+	.size	.L.map_aname.30, 26
 
 	.section	.rodata.map_aname.31,"aMS",@progbits,1
 	.type	.L.map_aname.31, @object

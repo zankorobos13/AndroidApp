@@ -17,7 +17,7 @@
 
 	/* 1: AndroidApp.dll */
 	/* uncompressed_file_size */
-	.word	36864
+	.word	39936
 	/* loaded */
 	.byte	0
 	/* data */
